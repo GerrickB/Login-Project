@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+        integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    body {
+        padding: 30px;
+    }
+</style>
+
+<body>
+    <script src="javascript.js" defer></script>
+
+    <span id="welcomeMsg"></span>
+    
+    <form class="pure-form pure-form-aligned">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-name">Username</label>
+                <input type="text" id="name" placeholder="Username" />
+                <span id="nameError"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-password">Password</label>
+                <input type="password" id="password" placeholder="Password" />
+                <span id="passError"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address" />
+                <span id="emailError"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-foo">Favorite Movie??</label>
+                <input type="text" id="movie" placeholder="Enter something here..." />
+                <span id="movieError"></span>
+            </div>
+            <div class="pure-controls">
+                <label for="aligned-cb" class="pure-checkbox">
+                    <input type="checkbox" id="remember" /> Remember Me
+                </label>
+                <button type="submit" class="pure-button pure-button-primary" onclick="return validateLogin()">Sign in</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+
+</html>
