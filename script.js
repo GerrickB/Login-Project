@@ -10,5 +10,14 @@ function validateLogin() {
     const enteredMovie = document.getElementById('movie').value;
     const rememberMe = document.getElementById('remember');
 
-    
+    if (email == enteredEmail && password == enteredPass && username == enteredName && movie == enteredMovie) {
+        sessionStorage.setItem('auth', 'yes');
+        if (rememberMe.checked) {
+            localStorage.setItem('auth', 'yes')
+        }
+        document.getElementById('welcomeMsg').innerHTML = 'Welcome, please click here to access your account <a href="account.html">Account</a>';
+    }
+    else {
+        document.getElementById('welcomeMsg').innerHTML = 'Please try again';
+    }
 }
