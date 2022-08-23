@@ -20,4 +20,20 @@ function validateLogin() {
     else {
         document.getElementById('welcomeMsg').innerHTML = 'Please try again';
     }
+
+    // Error messages when wrong input
+    if (email != enteredEmail){
+        document.getElementById('emailError').innerHTML = 'Wrong email';
+    }
+    if (password != enteredPass){
+        document.getElementById('passError').innerHTML = 'Wrong password';
+    }
+    if (username != enteredName){
+        document.getElementById('nameError').innerHTML = 'Wrong name';
+    }
+    if (movie != enteredMovie){
+        document.getElementById('movieError').innerHTML = 'Wrong movie';
+    }
+
+    return false;
 }
