@@ -37,3 +37,16 @@ function validateLogin() {
 
     return false;
 }
+
+// If the local storage is filled, autofill login details and autocheck remember me after refresh
+function rememberChecked() {
+    if (localStorage.getItem('auth') == 'yes') {
+        document.getElementById('remember').checked = true;
+        document.getElementById('email').value = 'email@gmail.com';
+        document.getElementById('password').value = 'pass';
+        document.getElementById('name').value = 'Neo';
+        document.getElementById('movie').value = 'Matrix';
+    }
+}
+
+rememberChecked();
